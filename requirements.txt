@@ -1,0 +1,77 @@
+# SmartPark MS — Requirements & Dependencies
+# =============================================
+# This is a Node.js project. All packages are managed via npm (package.json).
+# This file documents the required runtime environments and key package versions
+# for reference, documentation, and contributor onboarding.
+
+# -----------------------------------------------
+# RUNTIME REQUIREMENTS
+# -----------------------------------------------
+Node.js >= 18.0.0
+npm    >= 9.0.0
+
+# -----------------------------------------------
+# INSTALL COMMAND (one-step, unified project)
+# -----------------------------------------------
+#   npm install
+#
+# RUN COMMAND
+#   npm run dev
+#
+# Both the Express backend and the Vite frontend start together via `concurrently`.
+
+# -----------------------------------------------
+# CORE LANGUAGES & FRAMEWORKS
+# -----------------------------------------------
+React         >= 19.0.0     # Frontend UI library
+Express       >= 4.19.2     # Backend REST API framework
+Mongoose      >= 8.4.3      # MongoDB ODM for schema modeling
+
+# -----------------------------------------------
+# SERVER-SIDE DEPENDENCIES
+# -----------------------------------------------
+bcryptjs                >= 2.4.3    # Password hashing
+cors                    >= 2.8.5    # Cross-origin resource sharing headers
+dotenv                  >= 16.4.5   # Load environment variables from .env
+express                 >= 4.19.2   # HTTP server framework
+jsonwebtoken            >= 9.0.2    # JWT token generation and verification
+mongodb-memory-server   >= 10.0.0   # Zero-config in-memory MongoDB for development
+mongoose                >= 8.4.3    # MongoDB object modeling
+node-cron               >= 3.0.3    # Scheduled tasks (nightly backups at 00:00)
+
+# -----------------------------------------------
+# CLIENT-SIDE DEPENDENCIES
+# -----------------------------------------------
+framer-motion     >= 11.2.12   # Animation library for smooth UI transitions
+lucide-react      >= 0.395.0   # Icon set
+react             >= 19.0.0    # Core UI library
+react-dom         >= 19.0.0    # React DOM renderer
+react-router-dom  >= 6.24.0    # Client-side routing
+recharts          >= 2.12.7    # Chart components (area, pie, bar charts)
+
+# -----------------------------------------------
+# DEV / BUILD TOOLS
+# -----------------------------------------------
+vite              >= 5.3.1    # Frontend bundler and dev server
+tailwindcss       >= 3.4.4    # Utility-first CSS framework
+autoprefixer      >= 10.4.19  # PostCSS plugin for vendor prefixes
+postcss           >= 8.4.38   # CSS transformation pipeline
+concurrently      >= 8.2.2    # Run multiple npm scripts in parallel
+
+# -----------------------------------------------
+# DATABASE
+# -----------------------------------------------
+# MongoDB is NOT required to be installed separately.
+# The app uses mongodb-memory-server to spin up an in-memory database automatically.
+# To use a persistent database, set MONGODB_URI in your .env file:
+#
+#   MONGODB_URI=mongodb://localhost:27017/smartpark
+#   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/smartpark  (Atlas)
+
+# -----------------------------------------------
+# ENVIRONMENT VARIABLES (.env)
+# -----------------------------------------------
+# PORT=5001
+# JWT_SECRET=your_secret_key_here
+# NODE_ENV=development
+# MONGODB_URI=  (optional — leave blank to use in-memory MongoDB)
